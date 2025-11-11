@@ -1,59 +1,56 @@
-WebMobi QA Validation Assignment
+WebMobi QA Validation – Assignment Report
 
 Candidate: Gautami Shetty
 Date: November 2025
 
 Objective
 
-Automate login and event creation testing on the WebMobi Events Platform using Playwright within Cursor AI.
-The goal is to validate authentication, event creation, and UI response handling.
+Automate login and event creation validation for the WebMobi Events platform using Cursor AI with Playwright.
 
 Environment
 
-Operating System: Windows 10
+OS: Windows 10
 
-IDE: Cursor AI
+Automation Tool: Cursor AI IDE
 
-Automation Framework: Playwright (JavaScript)
-
-Browser: Chromium (non-headless)
+Framework: Playwright (JavaScript)
 
 Tested URL: https://events.webmobi.com
 
 Test Steps
 
-Launch the WebMobi Events website.
+Launch WebMobi Events portal.
 
-Navigate to the Login page.
+Navigate to Login.
 
 Authenticate using valid email and password credentials.
 
-Wait for the AI Event Assistant interface to appear.
+Wait for the AI Event Assistant to load.
 
-Enter an event description, for example:
-
+Submit event request, e.g.,
 “Networking dinner for 100 startup founders next month.”
 
-Observe system response and validate success or failure.
+Observe the response.
 
 Expected Result
 
-User should successfully log in.
+Login succeeds.
 
-The system should create a new event and confirm creation through a success message or listing.
+Event is created successfully and listed in the dashboard.
 
 Actual Result
 
-Login succeeds and AI Assistant appears.
+Login succeeds and AI assistant appears.
 
-Event creation fails with an error message:
+Event creation fails with error:
 
 “Invalid or expired token”
 
 Observation
 
-This issue occurs even with valid login credentials, both in manual testing and automated execution.
-The application fails to generate or validate a proper authentication token after login, resulting in a blocked event creation process.
+The authentication token generated after login is not accepted by the event creation API.
+Issue persists during both manual testing and automated Playwright runs.
+
 Bug Report
 Field	Description
 Title	Event creation fails with “Invalid or expired token”
@@ -61,21 +58,10 @@ Severity	High
 Reproducibility	100%
 Environment	https://events.webmobi.com
  (Nov 2025)
-Steps to Reproduce	
-1. Log in using valid credentials
+Steps to Reproduce	1. Sign in with email & password
 2. Wait for AI Assistant
-3. Type an event description
-Actual Result	Error message: “Invalid or expired token”
-Expected Result	Event should be successfully created and displayed in event list
-Impact	Prevents users from creating new events, blocking QA validation
-Evidence	Screenshot / Video log of test run
-Deliverables
-test.js – Playwright automation script
-
-README.md – Documentation and findings
-
-Screenshot / Video – Evidence of observed issue
-
-Conclusion
-
-The WebMobi login functionality works correctly, confirming valid authentication flow. However, event creation consistently fails due to backend token validation issues. The automation test accurately identifies and documents this defect as part of the QA validation process.
+3. Enter any event description
+Actual Result	Error: “Invalid or expired token”
+Expected Result	Event should be created and displayed in event list
+Impact	Prevents core event creation, blocking QA validation.
+Evidence	Screenshot / console log attached
