@@ -1,6 +1,7 @@
 WebMobi QA Validation – Assignment Report
 
 Candidate: Gautami Shetty
+
 Date: 11 November 2025
 
 Objective
