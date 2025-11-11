@@ -1,7 +1,7 @@
 WebMobi QA Validation – Assignment Report
 
 Candidate: Gautami Shetty
-Date: November 2025
+Date: 11 November 2025
 
 Objective
 
@@ -58,10 +58,12 @@ Severity	High
 Reproducibility	100%
 Environment	https://events.webmobi.com
  (Nov 2025)
-Steps to Reproduce	1. Sign in with email & password
+Steps to Reproduce	
+1. Sign in with email & password
 2. Wait for AI Assistant
 3. Enter any event description
 Actual Result	Error: “Invalid or expired token”
 Expected Result	Event should be created and displayed in event list
+
 Impact	Prevents core event creation, blocking QA validation.
 Evidence	Screenshot / console log attached
